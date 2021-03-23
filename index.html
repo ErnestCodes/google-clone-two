@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Google</title>
+  </head>
+  <body>
+    <div class="home">
+      <div class="home__header">
+        <div class="home__headerLeft">
+          <!-- <a to="/about">About</a>
+              <a to="/store">Store</a> -->
+        </div>
+        <div class="home__headerRight">
+          <a href="/gmail">Gmail</a>
+          <a href="/images">Images</a>
+          <i class="material-icons search__inputIcon">apps</i>
+          <i class="material-icons search__inputIcon">account_circle</i>
+        </div>
+      </div>
+      <div class="home__body">
+        <img
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+          alt="google logo"
+        />
+        <div class="home__inputContainer">
+          <form class="search" id="form" method="POST">
+            <div class="search__input">
+              <i class="material-icons search__inputIcon">search</i>
+              <input id="main-input" />
+              <i class="material-icons search__inputIcon">mic</i>
+            </div>
+            <div class="search__buttons">
+              <button type="submit" class="" variant="outlined">
+                Google Search
+              </button>
+              <button class="" variant="outlined">I'm feeling lucky</button>
+            </div>
+          </form>
+          <div class="search__languages">
+            <span class="search__langHead">Google offered in:</span>
+            <span class="search__langBody">
+              <a href="">Hausa</a>
+              <a href="">Igbo</a>
+              <a href="">Ede Yoruba</a>
+              <a href="">Nigerian Pidgin</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="row">
+          <div class="text">Nigeria</div>
+        </div>
+        <hr />
+        <div class="row bottom">
+          <ul>
+            <li class="left">Advertising</li>
+            <li class="left">Business</li>
+            <li class="left">About</li>
+            <li class="left">How search works</li>
+          </ul>
+          <ul class="right">
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Settings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.querySelector("#form").onsubmit = function (e) {
+      e.preventDefault();
+      const searchinputValue = document.querySelector("#main-input").value;
+      location.href = "https://google.com/search?q=" + searchinputValue;
+    };
+  </script>
+</html>
